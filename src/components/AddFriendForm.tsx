@@ -13,7 +13,8 @@ const AddFriendForm = ({ onAddFriend }: Props) => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!name || !image) return;
-    const id = Number(crypto.randomUUID());
+    const id = Math.floor(Math.random() * Number.MAX_SAFE_INTEGER);
+
     const newFriend = {
       id,
       name,

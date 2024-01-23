@@ -42,9 +42,7 @@ function App() {
 
   // SELECT FRIEND FUNCTION
   const handleSelection = (friend: Friend) => {
-    setSelectedFriend((selected) =>
-      selected?.id === friend.id ? null : friend
-    );
+    setSelectedFriend((cur) => (cur?.id === friend.id ? null : friend));
     setShowAddFriend(false);
   };
 
