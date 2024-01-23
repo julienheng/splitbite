@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Friend } from "../types/friend";
+import Button from "./Button";
 
 type Props = {
   onAddFriend: (friend: Friend) => void;
@@ -42,7 +43,7 @@ const AddFriendForm = ({ onAddFriend }: Props) => {
         type="text"
       />
 
-      <button className="button">Add</button>
+      <Button>Add</Button>
     </form>
   );
 };

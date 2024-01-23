@@ -1,4 +1,5 @@
 import { Friend as FriendType } from "../types/friend";
+import Button from "./Button";
 
 type Props = {
   friend: FriendType;
@@ -24,13 +25,11 @@ const Friend = ({ friend, onSelection, selectedFriend }: Props) => {
           {friend.name} owes you {Math.abs(friend.balance)}$
         </p>
       )}
-      {friend.balance === 0 && (
-        <p>You and {friend.name} are even</p>
-      )}
+      {friend.balance === 0 && <p>You and {friend.name} are even</p>}
 
-      <button className="button" onClick={() => onSelection(friend)}>
+      <Button onClick={() => onSelection(friend)}>
         {isSelected ? "Close" : "Select"}
-      </button>
+      </Button>
     </li>
   );
 };

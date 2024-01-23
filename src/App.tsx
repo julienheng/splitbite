@@ -6,6 +6,7 @@ import { Friend } from "./types/friend";
 import FriendsList from "./components/FriendsList";
 import AddFriendForm from "./components/AddFriendForm";
 import SplitBillForm from "./components/SplitBillForm";
+import Button from "./components/Button";
 
 const initialFriends = [
   {
@@ -59,6 +60,10 @@ function App() {
     setSelectedFriend(null);
   };
 
+  function handleShowAddFriend() {
+    setShowAddFriend((show) => !show);
+  }
+
   return (
     <main>
       <h1 className="title">
@@ -72,18 +77,16 @@ function App() {
             selectedFriend={selectedFriend}
           />
           {showAddFriend && <AddFriendForm onAddFriend={handleAddFriend} />}
-          <button
-            onClick={() => setShowAddFriend((show) => !show)}
-            className="button"
-          >
-            {showAddFriend ? "Close" : "Add Friend"}
-          </button>
+          <Button onClick={handleShowAddFriend}>
+            {showAddFriend ? "Close" : "Add friend"}
+          </Button>
         </div>
 
         {selectedFriend && (
           <SplitBillForm
             selectedFriend={selectedFriend}
             onSplitBill={handleSplitBill}
+            key={selectedFriend.id}
           />
         )}
       </div>
