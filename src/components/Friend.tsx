@@ -25,7 +25,7 @@ const Friend = ({ friend, onSelection, selectedFriend }: Props) => {
         </p>
       )}
       {friend.balance === 0 && (
-        <p className="">You and {friend.name} are even</p>
+        <p>You and {friend.name} are even</p>
       )}
 
       <button className="button" onClick={() => onSelection(friend)}>

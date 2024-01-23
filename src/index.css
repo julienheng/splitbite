@@ -1,3 +1,9 @@
+@import '@fontsource/lato/100.css';
+@import '@fontsource/lato/300.css';
+@import '@fontsource/lato/400.css';
+@import '@fontsource/lato/700.css';
+@import '@fontsource/lato/900.css';
+
 :root {
   --color-lightest: #fff4e6;
   --color-light: #ffe8cc;
@@ -13,8 +19,7 @@
 
 html {
   font-size: 62.5%;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 body {
@@ -23,6 +28,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: 'Lato', sans-serif;
 }
 
 .app {
@@ -78,10 +84,11 @@ body {
   font-size: 4.4rem;
   text-align: center;
   margin-bottom: 2.4rem;
+
 }
 .name {
   color: var(--color-medium);
-
+  font-weight: bold;
 }
 
 .title span {

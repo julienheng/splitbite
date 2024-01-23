@@ -25,7 +25,7 @@ const SplitBillForm = ({ selectedFriend, onSplitBill }: Props) => {
 
   return (
     <form className="form-split-bill" onSubmit={handleSubmit}>
-      <h2>
+      <h2 className="header">
         Split a bill with <span className="name">{selectedFriend.name}</span>
       </h2>
 
