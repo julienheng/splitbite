@@ -76,7 +76,8 @@ body {
 
 .selected,
 .sidebar li:hover {
-  background-color: var(--color-lightest);
+  /* background-color: var(--color-lightest); */
+  background-color: #F4F0E9;
 }
 
 .title {
@@ -135,7 +136,8 @@ form {
   align-items: center;
   gap: 1.2rem;
 
-  background-color: var(--color-lightest);
+  /* background-color: var(--color-lightest); */
+  background-color: #F4F0E9;
   border-radius: 7px;
 }
 
